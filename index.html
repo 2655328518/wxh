@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0,  user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"content="black">
+        <meta name="format-detection" content="telephone=no">
+    <title>东理淘</title>
+    <!--设置图标-->
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        var tim=null;
+        window.onload = function () {
+            var oDiv = document.getElementById('ad');
+            var oDivspan=oDiv.getElementsByTagName('div')
+            var oBtn = oDiv.getElementsByTagName('span');
+            var oDiv1 = oDiv.getElementsByTagName('li');
+            var oImg=oDiv.getElementsByTagName('img');
+            var nowZindex=2;
+            var spanZindex=3;
+            for (var i = 0; i < oBtn.length; i++) {
+                oBtn[i].index = i;
+                
+                oBtn[i].onmouseover = function () {
+                    for (var i = 0; i < oBtn.length; i++) {
+                        oBtn[i].className = '';
+                       // oDiv1[i].style.display = 'none';
+                    }
+                    this.className = 'active';
+                  //  oDiv1[this.index].style.display = 'block';
+                 // oImg[this.index].style.zIndex=nowZindex++;
+                 // this.style.zIndex=spanZindex++;
+                 // alert(nowZindex);
+                   //changec(360,this.index);
+                }
+            }
+        }
+       /* function changec(iTarget,x)
+        {
+            var oDiv = document.getElementById('ad');
+            var oImg=oDiv.getElementsByTagName('img');
+            var now=0;
+            if(x==0)return;
+            clearInterval(tim);
+             oImg[x].style.height=0;
+                    tim=setInterval(function(){
+                        if(oImg[x].offsetHeight==iTarget)
+                        {
+                            clearInterval(tim);
+                        }
+                        else
+                        {
+                            speed=(400-oImg[x].offsetHeight)/20;
+                            speed=Math.ceil(speed);
+                            oImg[x].style.height=oImg[x].offsetHeight+speed+'px';
+                        }
+                    }
+                    ,30)
+        }*/
+    </script>
+</head>
+
+<body>
+
+    <!--头部-->
+    <div id="header">
+        <!--顶部-->
+        <div class="header_top">
+            <!--版心-->
+            <div class="header_top_center">
+                <!--中部左侧-->
+                <div class="h_top_left">
+                    欢迎来到东理淘!
+                </div>
+                <div class="h_top_right">
+                    <a href="login.html">登录</a>
+                    <a href="regist.html">注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="header_center">
+            <div class="h_c_logo">
+                <a href="index.html"> <img src="image/logo4.png" alt=""></a>
+            </div>
+            <div class="h_c_search">
+                <form action="#">
+                    <input type="text" placeholder="请输入要查询的内容:" class="t_input">
+                    <input type="submit" class="t_button" value="查询">
+                </form>
+                <div class="hot">
+                    <a href="#">新鲜事</a>
+                    <a href="#">交易平台</a>
+                    <a href="#">便民服务</a>
+                </div>
+            </div>
+            <div class="h_c_code">
+                <img src="image/L_WX.png" alt="">
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">校园新闻</a></li>
+                <li><a href="#">家具家居</a></li>
+                <li><a href="#">交易平台</a></li>
+                <li><a href="#">便民服务</a></li>
+                <li><a href="/L_materials.html">学习资料</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--广告-->
+    <div id="ad">
+        <ul style="top:200px">
+            <a href="http://www.baidu.com"><img src="image/pic_wxh/ad.jpg" width="1200px" height="400px"></a>   
+        </ul>
+        <ul><a href="http://www.baidu.com"><img src="image/pic_wxh/ad2.jpg" width="1200px" height="400px"></a></ul>
+        <ul><a href="http://www.taobao.com"><img src="image/pic_wxh/ad3.jpg" width="1200px" height="400px"></a></ul>
+        <ul><a href="http://www.taobao.com"><img src="image/pic_wxh/ad4.png" width="1200px" height="400px"></a></ul>
+        <ul><a href="http://www.baidu.com"><img src="image/pic_wxh/ad5.png" width="1200px" height="400px"></a></ul>
+        <ul><a href="http://study.lanwang.online"><img src="image/pic_wxh/ad6.png" width="1200px" height="400px"></a></ul>
+        <div>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+    </div>
+    <!--推送-->
+    <div id="ms">
+        <div class="ms_top">
+            <span><a href="#">热门新闻</a></span>
+            <span><a href="#">热门交易</a></span>
+            <span><a href="#">今日特惠</a></span>
+        </div>
+        <div class="ms_body">
+            <!--热门新闻-->
+            <div class="news">
+                <ul>
+                    <li>
+                        <a href="#">
+
+                        </a>
+                    </li>
+                    <li><a href="#">
+
+                        </a></li>
+                </ul>
+            </div>
+            <!--热门交易-->
+            <div class="teade">
+                <ul>
+                    <li><a href="#">
+                            <img src="image/goods/good1.png" alt="">
+                            <p>小米(MI)小米净化器2智能家用卧室空气净化驱除甲醛雾霾</p>
+                            <i class="yuan">$</i><span class="price">100</span>
+                        </a></li>
+                    <li><a href="#">
+                            <img src="image/goods/good1.png" alt="">
+                            <p>小米(MI)小米净化器2智能家用卧室空气净化驱除甲醛雾霾</p>
+                            <i class="yuan">$</i><span class="price">100</span>
+                        </a></li>
+                </ul>
+            </div>
+            <!--今日特惠-->
+            <div class="prefer">
+                <ul>
+                    <li><a href="#">
+
+                        </a></li>
+                    <li><a href="#">
+
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="link">
+            <a href="aboutus.html">关于我们</a>
+            |
+            <a href="contact_way.html">联系我们</a>
+            |
+            <a href="#">人才招聘</a>
+            |
+            <a href="#">商家入驻</a>
+            |
+            <a href="#">广告服务</a>
+            |
+            <a href="www.lanwang.online" title="qq空间">友情链接</a>
+        </div>
+    </div>
+    <div id="copyright">
+        © 2019 donglitao.cn 版权所有
+    </div>
+</body>
+
+</html>

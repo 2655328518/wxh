@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function()
+    {
+        var oTab=document.getElementById('tab1');
+        //alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+        //alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);上下等价
+        for(var i=0;i<oTab.tBodies[0].rows.length;i++)
+        {
+            if(i%2==0)
+            {
+                oTab.tBodies[0].rows[i].style.background='#CCC';
+            }
+            else{
+                oTab.tBodies[0].rows[i].style.background='';
+            }
+        }
+    }
+</script>
+<body>
+    <table id="tab1" border="1" width="500">
+        <thead>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>李四</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>王二</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>麻子</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

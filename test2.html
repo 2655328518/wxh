@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/schoolnews.css">
+    <script>
+        var timer=null;
+        var tim=null;
+        var alpha=10;
+          window.onload=function(){
+         var Head=document.getElementById('head');
+         Head.onmouseover=function()
+         {
+             changec(100);
+            
+         }
+        Head.onmouseout=function()
+        {
+            changec(30);
+        }
+        }
+        function changec(iTarget){
+            var Head =document.getElementById('head');
+            
+           clearInterval(tim);
+           tim=setInterval(function(){
+             var speed=0;
+             if(alpha<iTarget)
+             {
+                 speed=1;
+             }
+             else{
+                 speed=-1;
+             }
+             if(alpha==iTarget)
+             {
+                 clearInterval(tim);
+             }
+             else
+             {
+                alpha+=speed;
+                Head.style.filter='alpha(opacity:'+alpha+')';
+                Head.style.opacity=alpha/100;
+             }
+           },30)
+          }
+        function startMove() {
+            var Btn1 = document.getElementById('btn1');
+            var Head = document.getElementById('head');
+            clearInterval(timer);
+            timer=setInterval(function () {
+                if(Head.offsetLeft>=0)
+                {
+                    clearInterval(timer);
+                }
+                else{
+                    Head.style.left = Head.offsetLeft + 20 + 'px';
+                }
+                if(Btn1.offsetLeft>=200)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    Btn1.style.left=Btn1.offsetLeft + 20 + 'px';
+                }
+            }, 30)
+        }
+        function backMove(){
+            var Btn1 = document.getElementById('btn1');
+            var Head = document.getElementById('head');
+            clearInterval(timer);
+            timer=setInterval(function () {
+                if(Head.offsetLeft<=-200)
+                {
+                    clearInterval(timer);
+                }
+                else{
+                    Head.style.left = Head.offsetLeft - 20 + 'px';
+                }
+                if(Btn1.offsetLeft<=0)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    Btn1.style.left=Btn1.offsetLeft - 20 + 'px';
+                }
+            }, 30)
+            }
+    </script>
+</head>
+
+<body>
+    <span id='btn1' onmouseover="startMove()" onclick="backMove()" >分享qq空间</span>
+    <div id="head"></div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#head{
+    height: 600px;
+    width:200px;
+    background: red;
+    position: absolute;
+    left: -200px;
+    filter: alpha(opacity：30);
+    opacity:0.1;
+}
+#btn1{
+   width: 20px;
+   height: 120px;
+   border: 1px solid;
+   position: absolute;
+   left: 0;
+}
